@@ -81,7 +81,7 @@
 
 
 
-{% macro sqlserver__get_period_boundaries(target_relation, timestamp_field, start_date, stop_date, period) -%}
+{% macro fabric_get_period_boundaries(target_relation, timestamp_field, start_date, stop_date, period) -%}
 
     {#  MSSQL cannot CAST datetime2 strings with more than 7 decimal places #}
     {% set start_date = start_date[0:27] %}

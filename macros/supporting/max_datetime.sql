@@ -15,7 +15,7 @@
 
 {%- endmacro -%}
 
-{%- macro sqlserver__max_datetime() -%}
+{%- macro fabric_max_datetime() -%}
 
     {%- do return(var('max_datetime', '9999-12-31 23:59:59.9999999')) -%}
 

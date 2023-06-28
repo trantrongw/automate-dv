@@ -31,7 +31,7 @@
 {%- endmacro -%}
 
 
-{%- macro sqlserver__cast_datetime(column_str, as_string=false, alias=none, date_type=none) -%}
+{%- macro fabric_cast_datetime(column_str, as_string=false, alias=none, date_type=none) -%}
 
     CONVERT(DATETIME2, {{ column_str }})
 

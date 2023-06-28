@@ -18,13 +18,13 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro sqlserver__binary_ghost(alias, hash) -%}
+{%- macro fabric_binary_ghost(alias, hash) -%}
     {%- if hash | lower == 'md5' -%}
-        CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(16)), 16) AS BINARY(16))
+        CAST(REPLICATE('0', 32) AS CHAR(32))
 	{%- elif hash | lower == 'sha' -%}
-        CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(32)), 32) AS BINARY(32))
+        CAST(REPLICATE('0', 40) AS CHAR(32))
     {%- else -%}
-        CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(16)), 16) AS BINARY(16))
+        CAST(REPLICATE('0', 32) AS CHAR(32))
     {%- endif -%}
 
     {%- if alias %} AS {{ alias }} {%- endif -%}

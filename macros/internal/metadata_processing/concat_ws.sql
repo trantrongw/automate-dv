@@ -26,7 +26,7 @@ CONCAT(
 
 {%- endmacro -%}
 
-{%- macro sqlserver__concat_ws(string_list, separator="||") -%}
+{%- macro fabric_concat_ws(string_list, separator="||") -%}
 
     {{ automate_dv.default__concat_ws(string_list=string_list, separator=separator) }}
 

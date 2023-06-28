@@ -37,7 +37,7 @@
 
 {%- endmacro -%}
 
-{%- macro sqlserver__null_expression(standardise, column_str, null_placeholder_string) -%}
+{%- macro fabric_null_expression(standardise, column_str, null_placeholder_string) -%}
 
     {%- set column_expression -%}
         ISNULL({{ standardise | replace('[EXPRESSION]', column_str) }}, '{{ null_placeholder_string }}')

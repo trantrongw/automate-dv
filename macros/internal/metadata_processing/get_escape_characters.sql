@@ -19,7 +19,7 @@
     {%- do return (('`', '`')) -%}
 {%- endmacro %}
 
-{%- macro sqlserver__get_escape_characters() %}
+{%- macro fabric_get_escape_characters() %}
     {%- do return (('"', '"')) -%}
 {%- endmacro %}
 

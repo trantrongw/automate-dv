@@ -40,7 +40,7 @@
 
 {% endmacro %}
 
-{% macro sqlserver__check_num_periods(start_date, stop_date, period) %}
+{% macro fabric_check_num_periods(start_date, stop_date, period) %}
 
     {% set num_periods_check_sql %}
     SELECT DATEDIFF_BIG({{ period }}, CAST('{{ start_date }}' AS DATETIME2),
