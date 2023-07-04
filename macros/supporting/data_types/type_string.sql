@@ -15,7 +15,7 @@
     STRING
 {%- endmacro -%}
 
-{%- macro fabric_type_string(is_hash, char_length) -%}
+{%- macro fabric__type_string(is_hash, char_length) -%}
     VARCHAR
 {%- endmacro -%}
 

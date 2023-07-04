@@ -24,7 +24,7 @@
 {%- endmacro -%}
 
 
-{%- macro fabric_cast_date(column_str, as_string=false, alias=none) -%}
+{%- macro fabric__cast_date(column_str, as_string=false, alias=none) -%}
 
     {%- if not as_string -%}
         CONVERT(DATE, {{ column_str }})

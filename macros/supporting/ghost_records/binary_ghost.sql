@@ -18,7 +18,7 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro fabric_binary_ghost(alias, hash) -%}
+{%- macro fabric__binary_ghost(alias, hash) -%}
     {%- if hash | lower == 'md5' -%}
         CAST(REPLICATE('0', 32) AS CHAR(32))
 	{%- elif hash | lower == 'sha' -%}

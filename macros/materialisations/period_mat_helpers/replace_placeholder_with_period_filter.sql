@@ -50,7 +50,7 @@
 
 
 
-{% macro fabric_replace_placeholder_with_period_filter(core_sql, timestamp_field, start_timestamp, stop_timestamp, offset, period) %}
+{% macro fabric__replace_placeholder_with_period_filter(core_sql, timestamp_field, start_timestamp, stop_timestamp, offset, period) %}
 
     {#  MSSQL cannot CAST datetime2 strings with more than 7 decimal places #}
     {% set start_timestamp_mssql = start_timestamp[0:27] %}

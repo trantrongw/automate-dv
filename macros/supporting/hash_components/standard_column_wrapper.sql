@@ -53,7 +53,7 @@
 {%- endmacro -%}
 
 
-{%- macro fabric_standard_column_wrapper(hash_content_casing) -%}
+{%- macro fabric__standard_column_wrapper(hash_content_casing) -%}
 
     {%- if hash_content_casing == 'upper' -%}
         {%- set standardise -%}

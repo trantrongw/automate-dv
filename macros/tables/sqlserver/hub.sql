@@ -3,7 +3,7 @@
  * This software includes code developed by the AutomateDV (f.k.a dbtvault) Team at Business Thinking Ltd. Trading as Datavault
  */
 
-{%- macro fabric_hub(src_pk, src_nk, src_extra_columns, src_ldts, src_source, source_model) -%}
+{%- macro fabric__hub(src_pk, src_nk, src_extra_columns, src_ldts, src_source, source_model) -%}
 
 {%- set source_cols = automate_dv.expand_column_list(columns=[src_pk, src_nk, src_extra_columns, src_ldts, src_source]) -%}
 

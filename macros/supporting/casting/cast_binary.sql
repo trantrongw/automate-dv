@@ -21,7 +21,7 @@
 {%- endmacro -%}
 
 
-{%- macro fabric_cast_binary(column_str, alias=none, quote=true) -%}
+{%- macro fabric__cast_binary(column_str, alias=none, quote=true) -%}
 
     {%- if quote -%}
         CONVERT({{ automate_dv.type_binary() }}, '{{ column_str }}', 2)

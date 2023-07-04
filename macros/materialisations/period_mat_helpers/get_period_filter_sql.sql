@@ -34,7 +34,7 @@
 
 
 
-{% macro fabric_get_period_filter_sql(target_cols_csv, base_sql, timestamp_field, period, start_timestamp, stop_timestamp, offset) -%}
+{% macro fabric__get_period_filter_sql(target_cols_csv, base_sql, timestamp_field, period, start_timestamp, stop_timestamp, offset) -%}
 
     {%- set filtered_sql = {'sql': base_sql} -%}
 

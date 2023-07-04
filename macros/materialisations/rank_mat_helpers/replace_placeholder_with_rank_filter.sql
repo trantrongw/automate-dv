@@ -28,7 +28,7 @@
 
 
 
-{% macro fabric_replace_placeholder_with_rank_filter(core_sql, rank_column, rank_iteration) %}
+{% macro fabric__replace_placeholder_with_rank_filter(core_sql, rank_column, rank_iteration) %}
 
     {%- set rank_filter -%}
         CAST({{ rank_column }} AS INT) = CAST({{ rank_iteration }} AS INT)

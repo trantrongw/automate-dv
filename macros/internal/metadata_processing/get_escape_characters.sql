@@ -19,7 +19,7 @@
     {%- do return (('`', '`')) -%}
 {%- endmacro %}
 
-{%- macro fabric_get_escape_characters() %}
+{%- macro fabric__get_escape_characters() %}
     {%- do return (('"', '"')) -%}
 {%- endmacro %}
 
