@@ -29,7 +29,7 @@
     STRING
 {%- endmacro -%}
 
-{%- macro fabric___type_binary() -%}
+{%- macro fabric__type_binary() -%}
     {%- if var('hash', 'MD5') | lower == 'md5' -%}
         CHAR(32)
     {%- elif var('hash', 'MD5') | lower == 'sha' -%}
