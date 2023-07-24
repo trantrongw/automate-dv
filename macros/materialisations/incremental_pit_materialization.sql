@@ -7,7 +7,7 @@
 
   {%- set full_refresh_mode = should_full_refresh() -%}
 
-  {% if target.type == "sqlserver" %}
+  {% if target.type == "fabric" %}
       {%- set target_relation = this.incorporate(type='table') -%}
   {%  else %}
       {%- set target_relation = this -%}
