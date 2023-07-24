@@ -52,7 +52,11 @@
     {%- elif (col_name | lower) is in (string_columns | map('lower') | list) -%}
         {% set col_sql = automate_dv.null_ghost(col.dtype, col_name) -%}
         {%- do col_definitions.append(col_sql) -%}
-
+    {%- else -%}
+        {%- set col_sql -%}
+            NULL AS {{ col_name }}
+        {%- endset -%}
+        {%- do col_definitions.append(col_sql) -%}
     {%- endif -%}
 
 {%- endfor -%}
