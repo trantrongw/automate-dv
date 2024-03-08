@@ -30,3 +30,13 @@
 {%- macro databricks__type_binary() -%}
     STRING
 {%- endmacro -%}
+
+{%- macro fabric__type_binary() -%}
+    {%- if var('hash', 'MD5') | lower == 'md5' -%}
+        CHAR(32)
+    {%- elif var('hash', 'MD5') | lower == 'sha' -%}
+        CHAR(40)
+    {%- else -%}
+        CHAR(32)
+    {%- endif -%}
+{%- endmacro -%}

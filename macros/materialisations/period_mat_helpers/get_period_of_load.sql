@@ -48,7 +48,7 @@
 {%- endmacro -%}
 
 
-{%- macro sqlserver__get_period_of_load(period, offset, start_timestamp) -%}
+{%- macro fabric__get_period_of_load(period, offset, start_timestamp) -%}
     {#  MSSQL cannot CAST datetime2 strings with more than 7 decimal places #}
     {% set start_timestamp_mssql = start_timestamp[0:23] %}
 
