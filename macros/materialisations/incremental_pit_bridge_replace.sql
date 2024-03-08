@@ -15,7 +15,7 @@
     {%- set dest_columns = adapter.get_columns_in_relation(target_relation) -%}
     {%- set dest_cols_csv = dest_columns | map(attribute='quoted') | join(', ') -%}
 
-    TRUNCATE TABLE {{ target_relation }};
+    DELETE {{ target_relation }};
 
     INSERT INTO {{ target_relation }} ({{ dest_cols_csv }})
     (
@@ -50,7 +50,7 @@
     {%- set dest_columns = adapter.get_columns_in_relation(target_relation) -%}
     {%- set dest_cols_csv = dest_columns | map(attribute='quoted') | join(', ') -%}
 
-    TRUNCATE TABLE {{ target_relation }};
+    DELETE {{ target_relation }};
 
     INSERT INTO {{ target_relation }} ({{ dest_cols_csv }})
     (
