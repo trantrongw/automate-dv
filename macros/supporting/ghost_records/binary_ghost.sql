@@ -22,13 +22,13 @@
 
 {%- macro fabric__binary_ghost(alias, hash) -%}
     {%- if hash | lower == 'md5' -%}
-        CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(16)), 16) AS BINARY(16))
+        CAST(REPLICATE('0', 32) AS CHAR(32))
 	{%- elif hash | lower == 'sha' -%}
-        CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(32)), 32) AS BINARY(32))
+        CAST(REPLICATE('0', 32) AS CHAR(32))
     {%- elif hash | lower == 'sha1' -%}
-        CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(20)), 20) AS BINARY(20))
+        CAST(REPLICATE('0', 20) AS CHAR(20))
     {%- else -%}
-        CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(16)), 16) AS BINARY(16))
+        CAST(REPLICATE('0', 32) AS CHAR(32))
     {%- endif -%}
 
     {%- if alias %} AS {{ alias }} {%- endif -%}
