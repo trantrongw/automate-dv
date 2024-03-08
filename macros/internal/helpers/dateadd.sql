@@ -15,7 +15,7 @@
 
 {% endmacro %}
 
-{% macro sqlserver__dateadd(datepart, interval, from_date_or_timestamp) %}
+{% macro fabric__dateadd(datepart, interval, from_date_or_timestamp) %}
 
     dateadd(
         {{ datepart }},

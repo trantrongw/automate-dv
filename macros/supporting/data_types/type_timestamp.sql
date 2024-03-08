@@ -11,6 +11,6 @@
     TIMESTAMP_NTZ
 {%- endmacro -%}
 
-{%- macro sqlserver__type_timestamp() -%}
+{%- macro fabric__type_timestamp() -%}
     DATETIME2
 {%- endmacro -%}

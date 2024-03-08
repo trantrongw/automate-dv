@@ -20,7 +20,7 @@
     {%- endif -%}
 {%- endmacro -%}
 
-{%- macro sqlserver__binary_ghost(alias, hash) -%}
+{%- macro fabric__binary_ghost(alias, hash) -%}
     {%- if hash | lower == 'md5' -%}
         CAST(REPLICATE(CAST(CAST('0' AS tinyint) AS BINARY(16)), 16) AS BINARY(16))
 	{%- elif hash | lower == 'sha' -%}

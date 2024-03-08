@@ -43,7 +43,7 @@
 
 {% endmacro %}
 
-{% macro sqlserver__hash_alg_md5() -%}
+{% macro fabric__hash_alg_md5() -%}
 
     {% do return(automate_dv.cast_binary("HASHBYTES('MD5', [HASH_STRING_PLACEHOLDER])", quote=false)) %}
 
@@ -83,7 +83,7 @@
 
 {% endmacro %}
 
-{% macro sqlserver__hash_alg_sha256() -%}
+{% macro fabric__hash_alg_sha256() -%}
 
     {% do return(automate_dv.cast_binary("HASHBYTES('SHA2_256', [HASH_STRING_PLACEHOLDER])", quote=false)) %}
 
@@ -125,7 +125,7 @@
 
 {% endmacro %}
 
-{% macro sqlserver__hash_alg_sha1() -%}
+{% macro fabric__hash_alg_sha1() -%}
 
     {% do return(automate_dv.cast_binary("HASHBYTES('SHA1', [HASH_STRING_PLACEHOLDER])", quote=false)) %}
 

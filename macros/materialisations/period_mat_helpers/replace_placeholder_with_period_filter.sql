@@ -52,7 +52,7 @@
 {% endmacro %}
 
 
-{% macro sqlserver__replace_placeholder_with_period_filter(core_sql, timestamp_field, start_timestamp, stop_timestamp, offset, period) %}
+{% macro fabric__replace_placeholder_with_period_filter(core_sql, timestamp_field, start_timestamp, stop_timestamp, offset, period) %}
     {%- if period is in ['microsecond', 'millisecond', 'second'] -%}
         {{ automate_dv.sqlserver_datepart_too_small_error(period=period) }}
     {%- endif -%}
